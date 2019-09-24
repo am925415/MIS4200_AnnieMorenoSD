@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MIS4200_AnnieMorenoSD.Models.Professor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.professorFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.professorLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.professorEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.professorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.professorLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.professorEmail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.professorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.professorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.professorID })
+        </td>
+    </tr>
+}
+
+</table>

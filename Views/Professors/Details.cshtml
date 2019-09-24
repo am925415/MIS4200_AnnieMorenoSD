@@ -1,0 +1,42 @@
+﻿@model MIS4200_AnnieMorenoSD.Models.Professor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.professorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.professorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

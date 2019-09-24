@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Annie Moreno</h1>
+    <p class="lead">Thanks for visiting my webpage!.</p>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>LinkedIn</h2>
+        <p>
+            Please visit my LinkedIn Profile.
+        </p>
+        <p><a class="btn btn-default" href="https://linkedin.com/in/anniemoreno90">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Handshake</h2>
+        <p>Please visit my Handshake profile.</p>
+        <p><a class="btn btn-default" href="https://handshake.com">Learn more &raquo;</a></p>
+        <h2>Links</h2>
+        <p>@Html.ActionLink("Students", "Index","Students")<br />
+        @Html.ActionLink("Courses", "Index","Courses")<br />
+        @Html.ActionLink("Professors", "Index","Professors")<br />
+        @Html.ActionLink("CourseDetails", "Index", "CourseDetails")</p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Cincinnati Reds</h2>
+        <p>Look at my favorite baseball team.</p>
+        <p><a class="btn btn-default" href="https://mlb.com/reds">Learn more &raquo;</a></p>
+    </div>
+</div>
