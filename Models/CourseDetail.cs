@@ -8,7 +8,7 @@ namespace MIS4200_AnnieMorenoSD.Models
     public class CourseDetail
     {
         public int courseDetailID { get; set; }
-        public string courseDetails { get; set; }
+        public string description { get; set; }
         public decimal coursePrice { get; set; }
         // the next two properties link the orderDetail to the Order
         public int courseID { get; set; }

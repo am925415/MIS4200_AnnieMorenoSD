@@ -50,7 +50,7 @@ namespace MIS4200_AnnieMorenoSD.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "courseDetailID,courseDetails,coursePrice,courseID,professorID")] CourseDetail courseDetail)
+        public ActionResult Create([Bind(Include = "courseDetailID,description,coursePrice,courseID,professorID")] CourseDetail courseDetail)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MIS4200_AnnieMorenoSD.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "courseDetailID,courseDetails,coursePrice,courseID,professorID")] CourseDetail courseDetail)
+        public ActionResult Edit([Bind(Include = "courseDetailID,description,coursePrice,courseID,professorID")] CourseDetail courseDetail)
         {
             if (ModelState.IsValid)
             {
