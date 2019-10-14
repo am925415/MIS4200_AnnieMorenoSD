@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<MIS4200_AnnieMorenoSD.Models.CourseDetail>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Course Detail";
 }
 
-<h2>Index</h2>
+<h2>Course Details</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-bordered table-hover" >
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Courses.description)
@@ -49,3 +49,5 @@
 }
 
 </table>
+<span class="glyphicon glyphicon-home"><</span> 
+<a class="btn btn-primary" @Html.ActionLink("Home", "Index", "Home")</a>

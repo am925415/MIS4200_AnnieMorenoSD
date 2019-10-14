@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<MIS4200_AnnieMorenoSD.Models.Professor>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Professors";
 }
 
-<h2>Index</h2>
+<h2>Professors</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-bordered table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.professorFirstName)
@@ -19,27 +19,31 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.professorEmail)
+            <p><span class="glyphicon glyphicon-envelope"></span></p>
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.professorFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.professorLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.professorEmail)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.professorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.professorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.professorID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.professorFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.professorLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.professorEmail)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.professorID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.professorID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.professorID })
+            </td>
+        </tr>
+    }
 
 </table>
+<span class="glyphicon glyphicon-home"><</span>
+<a class="btn btn-primary" @Html.ActionLink("Home", "Index", "Home")</a>
