@@ -10,10 +10,14 @@ namespace MIS4200_AnnieMorenoSD.Models
     public class Course
     {
         public int courseID { get; set; }
+
         [Display (Name = "Course description")]
+        [Required(ErrorMessage ="Course description is required")]
         public string description { get; set; }
 
         [Display(Name = "Course Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public DateTime courseDate { get; set; }
         // add any other fields as appropriate
         //Order is on the "one" side of a one-to-many relationship with OrderDetail
