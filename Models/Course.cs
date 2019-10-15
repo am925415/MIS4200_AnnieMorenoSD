@@ -13,6 +13,7 @@ namespace MIS4200_AnnieMorenoSD.Models
 
         [Display (Name = "Course description")]
         [Required(ErrorMessage ="Course description is required")]
+        [StringLength(100)]
         public string description { get; set; }
 
         [Display(Name = "Course Date")]

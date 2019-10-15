@@ -12,9 +12,13 @@ namespace MIS4200_AnnieMorenoSD.Models
         public int courseDetailID { get; set; }
 
         [Display(Name = "Course Information")]
+        [Required(ErrorMessage = "Course information is required")]
+        [StringLength(100)]
         public string description { get; set; }
 
         [Display(Name = "Course Price")]
+        [Range(1, 100)]
+        [DataType(DataType.Currency)]
         public decimal coursePrice { get; set; }
         // the next two properties link the orderDetail to the Order
 
